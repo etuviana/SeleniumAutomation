@@ -18,7 +18,7 @@ public class AddToCartTest extends BaseTest{
 		loginPage.login("standard_user", "secret_sauce");
 		
 		ProductsPage pPage = new ProductsPage(driver);
-		pPage.addToCart("Sauce Labs Bolt T-Shirt");
+		pPage.addToCart("Sauce Labs Bolt T-Shirt e");
 		pPage.addToCart("Sauce Labs Fleece Jacket");
 		pPage.openCart();
 		
