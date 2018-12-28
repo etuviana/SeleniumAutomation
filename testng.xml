@@ -3,6 +3,7 @@
 <suite name="Suite">
 	<test name="Test">
 		<parameter name="user1" value="standard_user" />
+		<parameter name="user2" value="standard_user" />
 		<parameter name="pass1" value="111" />
 		<parameter name="user3" value="standard_user" />
 		<parameter name="pass3" value="secret_sauce" />
