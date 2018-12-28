@@ -13,10 +13,15 @@ public class LoginTest extends BaseTest{
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.loginFaker();
 	}
-	
+	@Test
 	public void LT05_loginFailedWithParameters(String user5, String pass5) throws InterruptedException {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(user5,pass5);		
+	}
+	@Test
+	public void LT06_loginFailedWithParameters(String user6, String pass6) throws InterruptedException {
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.login(user6,pass6);		
 	}
 	
 	@Test(dataProviderClass= DataProviderPage.class, dataProvider="loginData") 

@@ -5,6 +5,8 @@
 		<parameter name="user1" value="standard_user" />
 		<parameter name="user5" value="standard_user" />
 	    <parameter name="pass5" value="234" />
+	    <parameter name="user6" value="standard_user" />
+	    <parameter name="pass6" value="234" />
 		<parameter name="pass1" value="111" />
 		<parameter name="user3" value="standard_user" />
 		<parameter name="pass3" value="secret_sauce" />
