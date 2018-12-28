@@ -25,6 +25,11 @@ public class BranchTest extends BaseTest{
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login(user1,pass1);		
 	}
+	
+	public void LT04_loginFailedWithParameters(String user1, String pass1) throws InterruptedException {
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.login(user1,pass1);		
+	}
 			
 	@Test @Parameters({"eee", "ttt"})
 	public void LT04_loginSuccedWithParameters(String user3, String pass3) throws InterruptedException {
