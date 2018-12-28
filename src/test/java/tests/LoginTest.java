@@ -19,7 +19,7 @@ public class LoginTest extends BaseTest{
 		loginPage.login(user5,pass5);		
 	}
 	
-	//nir
+	//nir adasdasd
 	@Test
 	public void LT06_loginFailedWithParameters(String user6, String pass6) throws InterruptedException {
 		LoginPage loginPage = new LoginPage(driver);
