@@ -12,12 +12,15 @@ public class ProductsPage extends BasePage{
 	@FindBy(css=".inventory_item")
 	@CacheLookup
 	private List<WebElement> list;
-	@FindBy(css=".shopping_cart_link path")
+	@FindBy(css="[class=\"shopping_cart_badge\"]")
 	@CacheLookup
 	private WebElement btnCart;
-	@FindBy(css=".fa-layers-counter.shopping_cart_badge")
+	@FindBy(css="[class=\"shopping_cart_badge\"]")
 	@CacheLookup
 	private WebElement iconCartNumberOfItems;
+	@FindBy(css="[class=\"title\"]")
+	@CacheLookup
+	private WebElement txtProducts;
 
 	public ProductsPage(WebDriver driver) {
 		super(driver);
@@ -29,7 +32,7 @@ public class ProductsPage extends BasePage{
 			String title = getText(titleEl);
 			if (name.equalsIgnoreCase(title)) {
 				//click the button
-				WebElement btnAdd = list.get(i).findElement(By.cssSelector("[id=\"add-to-cart-sauce-labs-backpack\"]"));
+				WebElement btnAdd = list.get(i).findElement(By.cssSelector("[class=\"btn btn_primary btn_small btn_inventory\"]"));
 				click(btnAdd);
 			}
 		}
@@ -49,5 +52,10 @@ public class ProductsPage extends BasePage{
 		String sNum = getText(iconCartNumberOfItems);
 		num = Integer.parseInt(sNum);
 		return num;
+	}
+
+	public String GetProductsTitle(){
+
+		return txtProducts.getText();
 	}
 }

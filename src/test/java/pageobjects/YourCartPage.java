@@ -6,7 +6,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
 public class YourCartPage extends BasePage{
-	@FindBy(css=".cart_checkout_link")
+	@FindBy(css="[id=\"checkout\"]")
 	@CacheLookup
 	private WebElement btnCheckOut;
 	

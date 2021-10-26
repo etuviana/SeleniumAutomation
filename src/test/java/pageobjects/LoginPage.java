@@ -18,6 +18,10 @@ public class LoginPage extends BasePage{
 	@FindBy(css="[id='login-button']")
 	@CacheLookup
 	private WebElement btnLogin;
+	@FindBy(css="[data-test=\"error\"]")
+	@CacheLookup
+	private WebElement txtError;
+
 	
 	public LoginPage(WebDriver driver) {
 		super(driver);
@@ -28,6 +32,11 @@ public class LoginPage extends BasePage{
 		fillText(userField, user);
 		fillText(passwordField, password);
 		click(btnLogin);
+	}
+
+	public String GetErrorMessage(){
+
+		return txtError.getText();
 	}
 	
 	public void loginFaker() {

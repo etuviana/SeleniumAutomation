@@ -15,7 +15,7 @@ public class YourInfoPage extends BasePage{
 	@FindBy(css="[data-test='postalCode']")
 	@CacheLookup
 	private WebElement zipField;
-	@FindBy(css=".cart_checkout_link")
+	@FindBy(css="[id=\"continue\"]")
 	@CacheLookup
 	private WebElement btnContinue;
 	

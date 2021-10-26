@@ -18,7 +18,7 @@ public class AddToCartTest extends BaseTest{
 		loginPage.login("standard_user", "secret_sauce");
 		
 		ProductsPage pPage = new ProductsPage(driver);
-		pPage.addToCart("Sauce Labs Bolt T-Shirt e");
+		pPage.addToCart("Sauce Labs Bolt T-Shirt");
 		pPage.addToCart("Sauce Labs Fleece Jacket");
 		pPage.openCart();
 		
@@ -26,7 +26,7 @@ public class AddToCartTest extends BaseTest{
 		ycPage.checkOut();
 		
 		YourInfoPage yipPage = new YourInfoPage(driver);
-		yipPage.addYourInfo("gal", "ester", "555");
+		yipPage.addYourInfo("elad", "tuviana", "555");
 		
 		OverViewPage ovPage = new OverViewPage(driver);
 		ovPage.cancel();
@@ -45,7 +45,7 @@ public class AddToCartTest extends BaseTest{
 		ycPage.checkOut();
 		
 		YourInfoPage yipPage = new YourInfoPage(driver);
-		yipPage.addYourInfo("gal", "ester", "555");
+		yipPage.addYourInfo("elad", "tuviana", "555");
 		
 		OverViewPage ovPage = new OverViewPage(driver);
 		ovPage.finish();
