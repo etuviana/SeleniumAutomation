@@ -1,5 +1,6 @@
 package tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -10,14 +11,13 @@ public class BaseTest {
 	
 	@BeforeClass
 	protected void setup() {
-		//System.setProperty("webdriver.chrome.driver", "C:\\Automation\\Drivers\\chromedriver.exe"); 
-		//ChromeOptions cOptions = new ChromeOptions();
-		//cOptions.addArguments("disable-infobars");
+
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");		
 	}	
-	@AfterClass
+	//@AfterClass
 	protected void tearDown() {
 		driver.quit();
 	}

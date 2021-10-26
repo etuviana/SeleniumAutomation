@@ -29,7 +29,7 @@ public class ProductsPage extends BasePage{
 			String title = getText(titleEl);
 			if (name.equalsIgnoreCase(title)) {
 				//click the button
-				WebElement btnAdd = list.get(i).findElement(By.cssSelector(".add-to-cart-button"));
+				WebElement btnAdd = list.get(i).findElement(By.cssSelector("[id=\"add-to-cart-sauce-labs-backpack\"]"));
 				click(btnAdd);
 			}
 		}

@@ -15,7 +15,7 @@ public class LoginPage extends BasePage{
 	@FindBy(css="[data-test='password']")
 	@CacheLookup
 	private WebElement passwordField;
-	@FindBy(css=".login-button")
+	@FindBy(css="[id='login-button']")
 	@CacheLookup
 	private WebElement btnLogin;
 	
