@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,9 +12,10 @@ import pageobjects.YourCartPage;
 import pageobjects.YourInfoPage;
 
 public class AddToCartTest extends BaseTest{
-	
-	@Test
-	public void addToCartCancel() throws InterruptedException {
+
+	@Test(description = "Add to cart cancel test")
+	@Description("Open web, enter user Name and password click on Login, add to cart , click on check out , fill info and click on cancel")
+	public void AT01_addToCartCancel() throws InterruptedException {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.login("standard_user", "secret_sauce");
 		
@@ -35,9 +37,10 @@ public class AddToCartTest extends BaseTest{
 		System.out.println(pPage.getNumberOfProductInCart());
 		Assert.assertEquals(pPage.getNumberOfProductInCart(), 2);
 	}
-	
-	@Test
-	public void addToCartSucceed() {
+
+	@Test(description = "Add to cart test")
+	@Description("Open web, enter user Name and password click on Login, add to cart , click on check out , fill info , click on finish and verify it")
+	public void AT02_addToCartSucceed() {
 		ProductsPage pPage = new ProductsPage(driver);
 		pPage.openCart();
 		

@@ -21,6 +21,12 @@ public class ProductsPage extends BasePage{
 	@FindBy(css="[class=\"title\"]")
 	@CacheLookup
 	private WebElement txtProducts;
+	@FindBy(css="[class=\"bm-burger-button\"]")
+	@CacheLookup
+	private WebElement btnBurger;
+	@FindBy(css="[id=\"logout_sidebar_link\"]")
+	@CacheLookup
+	private WebElement btnLogout;
 
 	public ProductsPage(WebDriver driver) {
 		super(driver);
@@ -38,11 +44,6 @@ public class ProductsPage extends BasePage{
 		}
 	}
 
-	public void addToCart(int index) {
-		WebElement btnAdd = list.get(index).findElement(By.cssSelector(".add-to-cart-button"));
-		click(btnAdd);
-	}
-
 	public void openCart() {
 		click(btnCart);
 	}
@@ -55,7 +56,13 @@ public class ProductsPage extends BasePage{
 	}
 
 	public String GetProductsTitle(){
-
 		return txtProducts.getText();
 	}
+
+	public void ClickOnLogout() {
+		click(btnBurger);
+		sleep(1000);
+		click(btnLogout);
+	}
+
 }

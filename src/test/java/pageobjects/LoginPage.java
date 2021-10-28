@@ -6,7 +6,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
 
-import com.github.javafaker.Faker;
 
 public class LoginPage extends BasePage{
 	@FindBy(css="[data-test='username']")
@@ -22,7 +21,7 @@ public class LoginPage extends BasePage{
 	@CacheLookup
 	private WebElement txtError;
 
-	
+
 	public LoginPage(WebDriver driver) {
 		super(driver);
 	}
@@ -38,14 +37,7 @@ public class LoginPage extends BasePage{
 
 		return txtError.getText();
 	}
-	
-	public void loginFaker() {
-		Faker faker = new Faker();
-		String user= faker.name().fullName();
-		String password = faker.internet().password();		
-		fillText(userField, user);
-		fillText(passwordField, password);
-		click(btnLogin);		
-		} 
+
+
 
 }
