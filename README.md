@@ -1,4 +1,6 @@
 # selenuim code example POM
-##learn about selenuim 
+## learn about selenuim 
 - full POM project
-- Full automation on https://www.saucedemo.com
+- automation on https://www.saucedemo.com
+- use with ALLURE report
+- testNG xml
